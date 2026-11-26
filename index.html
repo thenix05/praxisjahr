@@ -83,7 +83,8 @@ h1{font-size:44px;font-weight:560;letter-spacing:-.022em;line-height:1.06;margin
 .pstack{font-family:var(--mono);font-size:12.5px;color:var(--pale);display:block;margin-top:4px}
 .pright{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:12px;color:var(--dim);white-space:nowrap}
 .pright.islive{color:var(--acc)}
-.pright svg{width:14px;height:14px;transition:transform 160ms linear}
+.pright svg{width:15px;height:15px;transition:transform 200ms cubic-bezier(.16,1,.3,1)}
+.pitem.open .pright svg{transform:rotate(180deg)}
 .pbody{display:grid;grid-template-rows:0fr;transition:grid-template-rows 240ms cubic-bezier(.2,0,0,1)}
 .pbody>div{overflow:hidden}
 .pitem.open .pbody{grid-template-rows:1fr}
@@ -123,7 +124,7 @@ footer{padding:40px 0 64px;margin-top:96px;border-top:1px solid var(--line)}
  .btn:hover{border-color:var(--pale)}
  .btn.pri:hover{opacity:.9}
  .phead:hover{background:var(--surf)}
- .phead:hover .pright svg{transform:translateX(2px)}
+ .phead:hover .pright svg{transform:translateY(1px)}
  .crow:hover{background:var(--surf)}
  .sticky a:hover{border-color:var(--acc)}
 }
@@ -237,7 +238,7 @@ footer{padding:40px 0 64px;margin-top:96px;border-top:1px solid var(--line)}
     <div class="pitem">
       <button class="phead" aria-expanded="false">
         <span><span class="pname">Waffentrag-Trainer</span><span class="pstack">HTML, JavaScript, eine Datei, 106 Fragen</span></span>
-        <span class="pright islive">live<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+        <span class="pright islive">live<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
       </button>
       <div class="pbody"><div><div class="pwrap">
         <p><b>Aufgabe.</b> Ich musste die Prüfung Waffentragen vorbereiten und wollte die Fragen üben statt sie nur zu lesen.</p>
@@ -250,7 +251,7 @@ footer{padding:40px 0 64px;margin-top:96px;border-top:1px solid var(--line)}
     <div class="pitem">
       <button class="phead" aria-expanded="false">
         <span><span class="pname">Minimal API mit MongoDB</span><span class="pstack">C#, .NET, MongoDB, Docker Compose</span></span>
-        <span class="pright">Code<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+        <span class="pright">Details<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
       </button>
       <div class="pbody"><div><div class="pwrap">
         <p><b>Aufgabe.</b> Eine kleine Web-API mit Datenbank, die sich auf jedem Rechner gleich starten lässt.</p>
@@ -263,7 +264,7 @@ footer{padding:40px 0 64px;margin-top:96px;border-top:1px solid var(--line)}
     <div class="pitem">
       <button class="phead" aria-expanded="false">
         <span><span class="pname">Texterkennung mit Tesseract</span><span class="pstack">C#, Konsolenanwendung, OCR</span></span>
-        <span class="pright">Code<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+        <span class="pright">Details<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
       </button>
       <div class="pbody"><div><div class="pwrap">
         <p><b>Aufgabe.</b> Verstehen, wie zuverlässig Texterkennung bei unterschiedlichen Vorlagen wirklich ist.</p>
@@ -276,7 +277,7 @@ footer{padding:40px 0 64px;margin-top:96px;border-top:1px solid var(--line)}
     <div class="pitem">
       <button class="phead" aria-expanded="false">
         <span><span class="pname">Unit Testing mit xUnit und Moq</span><span class="pstack">C#, xUnit, Moq, Test Doubles</span></span>
-        <span class="pright">Code<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+        <span class="pright">Details<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></span>
       </button>
       <div class="pbody"><div><div class="pwrap">
         <p><b>Aufgabe.</b> Zu einer vorgegebenen Anwendung eigene Tests schreiben, inklusive Stubs und Spies.</p>
