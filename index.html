@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Praxisjahr 2027/28 · Tenzin Tsering Tünschitsang</title>
+<meta name="description" content="Informatikmittelschule IMS-T, GBS St. Gallen. Ich suche einen Betrieb für das Praxisjahr in der Applikationsentwicklung, August 2027 bis Juli 2028.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap">
+<style>
+:root{
+  --bg:#fafafa; --surface:#ffffff; --ink:#09090b; --muted:#71717a; --faint:#a1a1aa; --line:#e4e4e7;
+  --accent:#09090b; --ok:#15803d;
+  --shadow:0 1px 2px rgba(9,9,11,.04),0 1px 3px rgba(9,9,11,.06);
+  --ui:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
+  --ease-out:cubic-bezier(.23,1,.32,1);
+}
+@media (prefers-color-scheme:dark){:root{
+  --bg:#09090b; --surface:#131316; --ink:#fafafa; --muted:#a1a1aa; --faint:#71717a; --line:#27272a;
+  --accent:#fafafa; --ok:#4ade80; --shadow:0 1px 2px rgba(0,0,0,.4); color-scheme:dark}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:680px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left,0px)) 96px}
+.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
+header{padding:88px 0 0}
+h1{font-size:clamp(28px,6vw,38px);font-weight:600;letter-spacing:-.03em;line-height:1.1;margin:14px 0 0;text-wrap:balance}
+.role{margin:10px 0 0;color:var(--muted);font-size:15px}
+.lead{margin:26px 0 0;font-size:17px;line-height:1.6;max-width:56ch;text-wrap:pretty}
+.status{display:inline-flex;align-items:center;gap:8px;margin-top:26px;padding:6px 12px 6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:13px;color:var(--muted);box-shadow:var(--shadow)}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--ok);flex:0 0 auto}
+
+section{margin-top:64px}
+h2{font-size:13px;font-weight:600;letter-spacing:.02em;margin:0 0 20px;color:var(--ink)}
+h2::before{content:"";display:inline-block;width:14px;height:1px;background:var(--line);vertical-align:middle;margin-right:10px}
+
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+.fact{background:var(--surface);padding:16px 18px}
+.fact dt{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);margin:0}
+.fact dd{margin:6px 0 0;font-size:15px;font-weight:500;letter-spacing:-.01em}
+
+ul.plain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+ul.plain li{display:grid;grid-template-columns:18px 1fr;gap:12px;align-items:start;color:var(--muted);font-size:15px;line-height:1.55}
+ul.plain li b{color:var(--ink);font-weight:550}
+.mark{font-family:var(--mono);font-size:12px;color:var(--faint);padding-top:3px}
+
+.skills{display:flex;flex-wrap:wrap;gap:7px}
+.skill{font-size:13px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--muted)}
+.note{margin:18px 0 0;font-size:14px;color:var(--muted)}
+.cards{display:grid;gap:10px}
+a.card{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:var(--shadow);transition:transform 160ms var(--ease-out),border-color 140ms ease}
+a.card:active{transform:scale(.99)}
+.card .top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.card h3{margin:0;font-size:15px;font-weight:600;letter-spacing:-.01em}
+.card .tag{font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap}
+.card p{margin:8px 0 0;font-size:14px;color:var(--muted);line-height:1.55}
+.live{color:var(--ok);font-family:var(--mono);font-size:11px}
+
+.contact{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
+a.row{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--surface);padding:15px 18px;text-decoration:none;color:inherit;transition:background-color 140ms ease,transform 160ms var(--ease-out)}
+a.row:active{transform:scale(.995)}
+a.row .k{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
+a.row .v{font-size:15px;font-weight:500;letter-spacing:-.01em}
+
+footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--line);color:var(--faint);font-size:13px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+
+a:focus-visible,.card:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8px}
+
+@media (hover:hover) and (pointer:fine){
+  a.card:hover{border-color:var(--muted)}
+  a.row:hover{background:var(--bg)}
+}
+@media (max-width:520px){
+  header{padding-top:56px}
+  .facts{grid-template-columns:1fr}
+  a.row{flex-direction:column;align-items:flex-start;gap:4px}
+}
+
+.rise{opacity:0;transform:translateY(8px);animation:rise .5s var(--ease-out) forwards}
+@keyframes rise{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){
+  .rise{animation:none;opacity:1;transform:none}
+  *{transition-duration:.01ms!important}
+  a.card:active,a.row:active{transform:none}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="rise" style="animation-delay:0ms">
+    <span class="lbl">Praxisjahr 2027/28 · Applikationsentwicklung</span>
+    <h1>Tenzin Tsering Tünschitsang</h1>
+    <p class="role">Informatikmittelschule IMS-T, GBS St.&nbsp;Gallen</p>
+    <p class="lead">Ich suche einen Betrieb für mein Praxisjahr von August 2027 bis Juli 2028. Diese Seite erklärt in zwei Minuten, was das ist, weil es oft mit einer Lehre verwechselt wird.</p>
+    <span class="status"><span class="dot"></span>Suche läuft, Start August 2027</span>
+  </header>
+
+  <section class="rise" style="animation-delay:60ms">
+    <h2>Das Praxisjahr in Zahlen</h2>
+    <dl class="facts">
+      <div class="fact"><dt>Dauer</dt><dd>12 Monate, Vollzeit</dd></div>
+      <div class="fact"><dt>Zeitraum</dt><dd>08/2027 – 07/2028</dd></div>
+      <div class="fact"><dt>Fachrichtung</dt><dd>Applikationsentwicklung</dd></div>
+      <div class="fact"><dt>Abschluss</dt><dd>IPA und EFZ</dd></div>
+    </dl>
+  </section>
+
+  <section class="rise" style="animation-delay:110ms">
+    <h2>Was es nicht ist</h2>
+    <ul class="plain">
+      <li><span class="mark">01</span><span><b>Keine vierjährige Lehre.</b> Der schulische Teil meiner Ausbildung endet im Sommer 2027. Das Praxisjahr ist der betriebliche Schlussteil.</span></li>
+      <li><span class="mark">02</span><span><b>Keine Schultage, keine überbetrieblichen Kurse.</b> Ab dem ersten Tag fünf Tage pro Woche im Betrieb.</span></li>
+      <li><span class="mark">03</span><span><b>Am Schluss die IPA</b>, die individuelle praktische Arbeit, im Betrieb. Danach das EFZ.</span></li>
+      <li><span class="mark">04</span><span><b>Es gibt einen Standardvertrag</b> der Schule. Die Erläuterungen der Schulleitung schicke ich mit den Unterlagen.</span></li>
+    </ul>
+  </section>
+  <section class="rise" style="animation-delay:160ms">
+    <h2>Womit ich arbeite</h2>
+    <div class="skills">
+      <span class="skill">C# und .NET</span><span class="skill">MySQL</span><span class="skill">Datenbankmodellierung</span><span class="skill">SQL</span><span class="skill">Java</span><span class="skill">HTML und CSS</span><span class="skill">JavaScript und React</span><span class="skill">C</span><span class="skill">Linux, Ubuntu</span><span class="skill">Git</span><span class="skill">xUnit und Moq</span><span class="skill">Docker Compose</span><span class="skill">AWS Lambda, erste Schritte</span>
+    </div>
+    <p class="note">Zeugnisnote Informatik 5.0. Sprachen: Deutsch, Englisch B2, Französisch DELF B1.</p>
+  </section>
+
+  <section class="rise" style="animation-delay:210ms">
+    <h2>Zwei Dinge, die nicht im Zeugnis stehen</h2>
+    <ul class="plain">
+      <li><span class="mark">→</span><span>Einen <b>ganztägigen Workshop zu Git und Markdown</b> für rund hundert Informatiklernende habe ich selbst konzipiert und durchgeführt.</span></li>
+      <li><span class="mark">→</span><span>An der <b>Regionalmeisterschaft Informatik 2026</b>, Skill 09 Software Applications Development, habe ich den dritten Rang unter den Teilnehmenden des GBS erreicht.</span></li>
+    </ul>
+  </section>
+  <section class="rise" style="animation-delay:260ms">
+    <h2>Projekte</h2>
+    <div class="cards">
+      <a class="card" href="https://thenix05.github.io/waffentrag-trainer/" rel="noopener">
+        <div class="top"><h3>Waffentrag-Trainer</h3><span class="live">live</span></div>
+        <p>Multiple-Choice-Trainer für die Prüfung Waffentragen, gebaut, weil ich sie selbst vorbereiten musste. 106 Fragen aus dem öffentlichen Katalog des fedpol, Fortschritt wird lokal im Browser gespeichert.</p>
+      </a>
+      <a class="card" href="https://github.com/thenix05/TextRecognitionOCR" rel="noopener">
+        <div class="top"><h3>TextRecognitionOCR</h3><span class="tag">C#</span></div>
+        <p>Konsolenanwendung, die mit Tesseract Text aus Bildern liest und die Zuverlässigkeit der Erkennung ausgibt.</p>
+      </a>
+      <a class="card" href="https://github.com/thenix05/m450" rel="noopener">
+        <div class="top"><h3>Unit Testing mit xUnit und Moq</h3><span class="tag">C#</span></div>
+        <p>AAA-Pattern, Test Doubles, Stubs und Spies. Eigene Testprojekte zu einer vorgegebenen Anwendung.</p>
+      </a>
+      <a class="card" href="https://github.com/thenix05/min-api-with-mongo" rel="noopener">
+        <div class="top"><h3>Minimal API mit MongoDB</h3><span class="tag">C# · Docker</span></div>
+        <p>Kleine Web-API, Start über Docker Compose zusammen mit der Datenbank.</p>
+      </a>
+    </div>
+  </section>
+  <section class="rise" style="animation-delay:310ms">
+    <h2>Was ich noch nicht kann</h2>
+    <p class="note" style="margin-top:0;max-width:58ch">Python und PHP habe ich nie gebraucht. Ihre Technologien kenne ich mit grosser Wahrscheinlichkeit auch noch nicht. Dafür gibt es die Vorbereitungszeit: Im letzten Schulsemester arbeite ich mich in Absprache mit Ihnen in die benötigten Technologien ein, schulisch begleitet. Ein Jahr ist kurz, das weiss ich. Deshalb fange ich nicht erst im August an.</p>
+  </section>
+
+  <section class="rise" style="animation-delay:360ms">
+    <h2>Kontakt</h2>
+    <div class="contact">
+      <a class="row" href="mailto:tenzin.tuenschitsang@hotmail.com"><span class="k">E-Mail</span><span class="v">tenzin.tuenschitsang@hotmail.com</span></a>
+      <a class="row" href="tel:+41792434097"><span class="k">Telefon</span><span class="v">+41 79 243 40 97</span></a>
+      <a class="row" href="https://github.com/thenix05" rel="noopener"><span class="k">GitHub</span><span class="v">github.com/thenix05</span></a>
+    </div>
+    <p class="note">Motivationsschreiben, Lebenslauf und Zeugnisse sende ich Ihnen gerne zu. Eine kurze Zeile genügt.</p>
+  </section>
+
+  <footer>
+    <span>St.&nbsp;Gallen</span>
+    <span>Stand 26. November 2026</span>
+  </footer>
+
+</div>
+</body>
+</html>
