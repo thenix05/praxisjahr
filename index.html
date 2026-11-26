@@ -3,175 +3,371 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<title>Praxisjahr 2027/28 · Tenzin Tsering Tünschitsang</title>
-<meta name="description" content="Informatikmittelschule IMS-T, GBS St. Gallen. Ich suche einen Betrieb für das Praxisjahr in der Applikationsentwicklung, August 2027 bis Juli 2028.">
+<title>Praktikumsjahr 2027/28 · Tenzin Tsering Tünschitsang</title>
+<meta name="description" content="Informatikmittelschule IMS-T, GBS St. Gallen. Zwölf Monate Praktikumsjahr in der Applikationsentwicklung, August 2027 bis Juli 2028.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400..700&display=swap">
 <style>
 :root{
-  --bg:#fafafa; --surface:#ffffff; --ink:#09090b; --muted:#71717a; --faint:#a1a1aa; --line:#e4e4e7;
-  --accent:#09090b; --ok:#15803d;
-  --shadow:0 1px 2px rgba(9,9,11,.04),0 1px 3px rgba(9,9,11,.06);
-  --ui:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --mono:ui-monospace,SFMono-Regular,Menlo,monospace;
-  --ease-out:cubic-bezier(.23,1,.32,1);
+ --bg:#fff; --surf:#f6f6f7; --line:#e4e4e7; --ink:#0e0e10; --dim:#5c5c63; --pale:#8b8b93;
+ --acc:#d13438; --accsoft:#fdecec; --inv:#fff;
+ --ui:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif;
+ --mono:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+ --out:cubic-bezier(.16,1,.3,1);
 }
 @media (prefers-color-scheme:dark){:root{
-  --bg:#09090b; --surface:#131316; --ink:#fafafa; --muted:#a1a1aa; --faint:#71717a; --line:#27272a;
-  --accent:#fafafa; --ok:#4ade80; --shadow:0 1px 2px rgba(0,0,0,.4); color-scheme:dark}}
+ --bg:#0b0b0c; --surf:#16161a; --line:#26262b; --ink:#f0f0f2; --dim:#a0a0a8; --pale:#6e6e77;
+ --acc:#ff5e62; --accsoft:#2a1416; --inv:#0b0b0c; color-scheme:dark}}
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:680px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left,0px)) 96px}
-.lbl{font-family:var(--mono);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--faint)}
-header{padding:88px 0 0}
-h1{font-size:clamp(28px,6vw,38px);font-weight:600;letter-spacing:-.03em;line-height:1.1;margin:14px 0 0;text-wrap:balance}
-.role{margin:10px 0 0;color:var(--muted);font-size:15px}
-.lead{margin:26px 0 0;font-size:17px;line-height:1.6;max-width:56ch;text-wrap:pretty}
-.status{display:inline-flex;align-items:center;gap:8px;margin-top:26px;padding:6px 12px 6px 10px;border:1px solid var(--line);border-radius:999px;background:var(--surface);font-size:13px;color:var(--muted);box-shadow:var(--shadow)}
-.dot{width:7px;height:7px;border-radius:50%;background:var(--ok);flex:0 0 auto}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ui);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;font-variant-numeric:tabular-nums}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.col{max-width:680px}
+section{padding:96px 0 0}
+.rule{height:1px;background:var(--line);margin-top:96px}
+.mlbl{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.07em;text-transform:uppercase;color:var(--pale);margin:0 0 16px}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--acc);outline-offset:2px;border-radius:4px}
+[id]{scroll-margin-top:72px}
 
-section{margin-top:64px}
-h2{font-size:13px;font-weight:600;letter-spacing:.02em;margin:0 0 20px;color:var(--ink)}
-h2::before{content:"";display:inline-block;width:14px;height:1px;background:var(--line);vertical-align:middle;margin-right:10px}
+header{padding:96px 0 0}
+.meta{font-family:var(--mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--pale);line-height:1;margin:0}
+h1{font-size:44px;font-weight:560;letter-spacing:-.022em;line-height:1.06;margin:20px 0 0;max-width:20ch;text-wrap:balance}
+.lead{font-size:18px;letter-spacing:-.005em;line-height:1.55;color:var(--dim);max-width:58ch;margin:20px 0 0}
+.acts{display:flex;flex-wrap:wrap;gap:10px;margin:28px 0 0}
+.btn{display:inline-flex;align-items:center;gap:8px;font-size:14.5px;font-weight:520;padding:10px 16px;border:1px solid var(--line);border-radius:8px;background:var(--bg);text-decoration:none;transition:background-color 120ms linear,border-color 120ms linear}
+.btn.pri{background:var(--ink);color:var(--inv);border-color:var(--ink)}
+.btn svg{width:14px;height:14px}
 
-.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
-.fact{background:var(--surface);padding:16px 18px}
-.fact dt{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint);margin:0}
-.fact dd{margin:6px 0 0;font-size:15px;font-weight:500;letter-spacing:-.01em}
+.diag{margin:44px 0 0;position:relative}
+.drow{margin:0 0 20px}
+.rlbl{font-family:var(--mono);font-size:12px;color:var(--pale);display:block;margin:0 0 8px;letter-spacing:.04em}
+.bar{height:28px;border:1px solid var(--line);background:var(--surf);border-radius:6px;display:flex;align-items:center;justify-content:flex-end;padding:0 12px}
+.bar span{font-family:var(--mono);font-size:12.5px;color:var(--dim)}
+.track{display:flex;align-items:flex-end;height:48px;position:relative}
+.seg{flex:1;height:28px;border:1px solid var(--line);border-right:0;background:var(--surf);color:var(--dim);font-family:var(--ui);font-size:12.5px;display:grid;place-items:center;padding:0;cursor:default;position:relative;border-radius:0}
+.seg:first-child{border-radius:6px 0 0 6px}
+.seg.prak{height:48px;border:0;color:var(--inv);font-size:13px;font-weight:540;border-radius:0 6px 6px 0;overflow:hidden;cursor:default}
+.seg.prak .fill{position:absolute;inset:0;background:var(--ink);border-radius:0 6px 6px 0;transform:scaleX(0);transform-origin:left;animation:grow 520ms cubic-bezier(.22,1,.36,1) 220ms forwards}
+@keyframes grow{to{transform:scaleX(1)}}
+.seg.prak .txt{position:relative;z-index:1;opacity:0;animation:fade 200ms linear 620ms forwards}
+.seg.prak .txt small{display:none}
+@keyframes fade{to{opacity:1}}
+.axis{height:1px;background:var(--line);margin-top:10px;position:relative}
+.marks{display:flex;justify-content:space-between;margin-top:7px}
+.marks span{font-family:var(--mono);font-size:11.5px;color:var(--pale)}
+.marks span:last-child{color:var(--ink)}
+.goal{font-size:12px;color:var(--dim);margin:6px 0 0;text-align:right}
+.cap{min-height:20px;font-size:13px;line-height:1.4;color:var(--dim);margin:12px 0 0}
+.now{position:absolute;width:2px;background:var(--acc);top:0;opacity:0;animation:fade 200ms linear 740ms forwards;pointer-events:none}
+.now b{position:absolute;top:-7px;left:-1.5px;width:5px;height:5px;border-radius:50%;background:var(--acc)}
+.now i{position:absolute;top:-10px;left:10px;font-family:var(--mono);font-size:11px;font-style:normal;color:var(--acc);white-space:nowrap}
+.now.flip i{left:auto;right:10px}
 
-ul.plain{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
-ul.plain li{display:grid;grid-template-columns:18px 1fr;gap:12px;align-items:start;color:var(--muted);font-size:15px;line-height:1.55}
-ul.plain li b{color:var(--ink);font-weight:550}
-.mark{font-family:var(--mono);font-size:12px;color:var(--faint);padding-top:3px}
+.facts{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.facts div{flex:1;padding:16px 18px;border-right:1px solid var(--line)}
+.facts div:last-child{border-right:0}
+.facts dt{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--pale);margin:0}
+.facts dd{margin:8px 0 0;font-size:20px;font-weight:540;letter-spacing:-.01em}
+.grp{display:grid;grid-template-columns:160px 1fr;gap:16px;padding:14px 0;border-top:1px solid var(--line)}
+.grp:first-of-type{border-top:0;padding-top:0}
+.grp dt{font-family:var(--mono);font-size:12px;color:var(--pale);line-height:1.45;letter-spacing:.03em}
+.grp dd{margin:0;font-size:15px;line-height:1.45}
+.after{font-size:14px;color:var(--dim);margin:18px 0 0}
 
-.skills{display:flex;flex-wrap:wrap;gap:7px}
-.skill{font-size:13px;padding:5px 11px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--muted)}
-.note{margin:18px 0 0;font-size:14px;color:var(--muted)}
-.cards{display:grid;gap:10px}
-a.card{display:block;text-decoration:none;color:inherit;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:18px;box-shadow:var(--shadow);transition:transform 160ms var(--ease-out),border-color 140ms ease}
-a.card:active{transform:scale(.99)}
-.card .top{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
-.card h3{margin:0;font-size:15px;font-weight:600;letter-spacing:-.01em}
-.card .tag{font-family:var(--mono);font-size:11px;color:var(--faint);white-space:nowrap}
-.card p{margin:8px 0 0;font-size:14px;color:var(--muted);line-height:1.55}
-.live{color:var(--ok);font-family:var(--mono);font-size:11px}
+.plist{border-top:1px solid var(--line)}
+.pitem{border-bottom:1px solid var(--line)}
+.phead{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;background:none;border:0;padding:17px 8px 17px 0;font:inherit;color:inherit;text-align:left;cursor:pointer;transition:background-color 120ms linear}
+.pname{font-size:17px;font-weight:520;letter-spacing:-.01em;display:block}
+.pstack{font-family:var(--mono);font-size:12.5px;color:var(--pale);display:block;margin-top:4px}
+.pright{display:flex;align-items:center;gap:7px;font-family:var(--mono);font-size:12px;color:var(--dim);white-space:nowrap}
+.pright.islive{color:var(--acc)}
+.pright svg{width:14px;height:14px;transition:transform 160ms linear}
+.pbody{display:grid;grid-template-rows:0fr;transition:grid-template-rows 240ms cubic-bezier(.2,0,0,1)}
+.pbody>div{overflow:hidden}
+.pitem.open .pbody{grid-template-rows:1fr}
+.pwrap{padding:0 0 20px;max-width:62ch;opacity:0;transition:opacity 160ms linear 60ms}
+.pitem.open .pwrap{opacity:1}
+.pwrap p{margin:0 0 8px;font-size:14.5px;line-height:1.55;color:var(--dim)}
+.pwrap p b{color:var(--ink);font-weight:540}
+.pwrap a{font-size:14px;color:var(--acc);text-underline-offset:3px}
 
-.contact{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;box-shadow:var(--shadow)}
-a.row{display:flex;align-items:center;justify-content:space-between;gap:16px;background:var(--surface);padding:15px 18px;text-decoration:none;color:inherit;transition:background-color 140ms ease,transform 160ms var(--ease-out)}
-a.row:active{transform:scale(.995)}
-a.row .k{font-family:var(--mono);font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--faint)}
-a.row .v{font-size:15px;font-weight:500;letter-spacing:-.01em}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.two p{margin:0;font-size:15px;line-height:1.55}
+.two p b{font-weight:540}
+.two p span{display:block;color:var(--dim);margin-top:4px;font-size:14.5px}
 
-footer{margin-top:72px;padding-top:24px;border-top:1px solid var(--line);color:var(--faint);font-size:13px;display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between}
+.why{font-size:14.5px;color:var(--dim);line-height:1.6;max-width:60ch;margin:0}
 
-a:focus-visible,.card:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:8px}
+.contact{display:grid;gap:10px;margin-top:4px}
+.crow{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;text-decoration:none;padding:6px 8px 6px 0;border-radius:6px;transition:background-color 120ms linear}
+.ck{font-family:var(--mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--pale);width:80px;flex:0 0 auto}
+.cv{font-size:17px;font-weight:520;letter-spacing:-.01em;word-break:break-word;min-width:0}
+.crow.pri .cv{font-size:19px}
+.hint{font-size:14px;color:var(--dim);margin:18px 0 0;max-width:58ch}
+
+footer{padding:40px 0 64px;margin-top:96px;border-top:1px solid var(--line)}
+.foot{font-family:var(--mono);font-size:12.5px;color:var(--pale);line-height:1.6}
+
+.sticky{position:fixed;top:0;left:0;right:0;height:48px;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 1px 2px rgba(0,0,0,.04);display:flex;align-items:center;z-index:9;opacity:0;transform:translateY(-4px);pointer-events:none;transition:opacity 180ms var(--out),transform 180ms var(--out)}
+.sticky.on{opacity:1;transform:none;pointer-events:auto;transition-duration:180ms}
+.sticky .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%}
+.sticky span{font-size:13.5px;color:var(--dim)}
+.sticky a{font-size:13.5px;font-weight:540;text-decoration:none;border-bottom:1px solid var(--line);padding-bottom:1px}
+
+.in{opacity:0;transform:translateY(6px);animation:in 320ms var(--out) forwards}
+@keyframes in{to{opacity:1;transform:none}}
 
 @media (hover:hover) and (pointer:fine){
-  a.card:hover{border-color:var(--muted)}
-  a.row:hover{background:var(--bg)}
+ .btn:hover{border-color:var(--pale)}
+ .btn.pri:hover{opacity:.9}
+ .phead:hover{background:var(--surf)}
+ .phead:hover .pright svg{transform:translateX(2px)}
+ .crow:hover{background:var(--surf)}
+ .sticky a:hover{border-color:var(--acc)}
 }
-@media (max-width:520px){
-  header{padding-top:56px}
-  .facts{grid-template-columns:1fr}
-  a.row{flex-direction:column;align-items:flex-start;gap:4px}
+@media (max-width:760px){
+ section{padding-top:64px}
+ .rule{margin-top:64px}
+ header{padding-top:64px}
+ h1{font-size:30px}
+ .lead{font-size:16.5px}
+ .facts{flex-wrap:wrap}
+ .facts div{flex:1 1 50%;border-bottom:1px solid var(--line)}
+ .facts div:nth-child(2n){border-right:0}
+ .facts div:nth-child(n+3){border-bottom:0}
+ .grp{grid-template-columns:1fr;gap:6px}
+ .ck{width:auto}
+ .crow.pri .cv{font-size:16px}
+ .cv{font-size:16px}
+ .two{grid-template-columns:1fr;gap:20px}
+ .track{display:block;height:auto}
+ .seg{width:100%;height:44px;border:1px solid var(--line);border-bottom:0;place-items:center start;padding:0 14px;font-size:14px;border-radius:0}
+ .seg:first-child{border-radius:6px 6px 0 0}
+ .seg.prak{height:72px;border:0;border-radius:0 0 6px 6px;display:block;padding:14px}
+ .seg.prak .fill{border-radius:0 0 6px 6px;transform:scaleY(0);transform-origin:top;animation-name:growy}
+ @keyframes growy{to{transform:scaleY(1)}}
+ .seg.prak .txt{display:block;text-align:left}
+ .seg.prak .txt small{display:block}
+ .seg.prak .txt small{display:block;font-weight:400;font-size:12px;opacity:.7;margin-top:3px}
+ .marks{display:none}
+ .axis{display:none}
+ .now{width:100%;height:2px;left:0}
+ .now b{top:-1.5px;left:-1px}
+ .now i{top:-20px;left:0}
+ .goal{text-align:left;margin-top:10px}
 }
-
-.rise{opacity:0;transform:translateY(8px);animation:rise .5s var(--ease-out) forwards}
-@keyframes rise{to{opacity:1;transform:none}}
 @media (prefers-reduced-motion:reduce){
-  .rise{animation:none;opacity:1;transform:none}
-  *{transition-duration:.01ms!important}
-  a.card:active,a.row:active{transform:none}
+ *{animation-duration:.01ms!important;animation-delay:0ms!important;transition-duration:.01ms!important}
+ .seg.prak .fill{transform:none}
+ .seg.prak .txt,.now,.in{opacity:1;transform:none}
 }
 </style>
 </head>
 <body>
+
+<div class="sticky" id="bar"><div class="wrap"><span>Praktikumsjahr August 2027 bis Juli 2028</span><a href="#kontakt">Mail schreiben</a></div></div>
+
 <div class="wrap">
-  <header class="rise" style="animation-delay:0ms">
-    <span class="lbl">Praxisjahr 2027/28 · Applikationsentwicklung</span>
-    <h1>Tenzin Tsering Tünschitsang</h1>
-    <p class="role">Informatikmittelschule IMS-T, GBS St.&nbsp;Gallen · Informatiker EFZ Applikationsentwicklung mit Berufsmaturität</p>
-    <p class="lead">Ich suche einen Betrieb für mein Praxisjahr von August 2027 bis Juli 2028. Diese Seite erklärt in zwei Minuten, was das ist, weil es oft mit einer Lehre verwechselt wird.</p>
-    <span class="status"><span class="dot"></span>Suche läuft, Start August 2027</span>
-  </header>
+<header class="col">
+  <p class="meta in">IMS-T Applikationsentwicklung · GBS St.&nbsp;Gallen · 2024 bis 2028</p>
+  <h1 class="in" style="animation-delay:40ms">Vier Jahre Ausbildung. Ein Jahr davon in Ihrem Betrieb.</h1>
+  <p class="lead in" style="animation-delay:80ms">Ich besuche das dritte Jahr der Informatikmittelschule und suche das Praktikumsjahr von August 2027 bis Juli 2028. Kein vierjähriger Lehrvertrag, sondern zwölf Monate Vollzeit, am Schluss das EFZ als Informatiker Applikationsentwicklung zusammen mit der Berufsmaturität.</p>
 
-  <section class="rise" style="animation-delay:60ms">
-    <h2>Das Praxisjahr in Zahlen</h2>
-    <dl class="facts">
-      <div class="fact"><dt>Dauer</dt><dd>12 Monate, Vollzeit</dd></div>
-      <div class="fact"><dt>Zeitraum</dt><dd>08/2027 – 07/2028</dd></div>
-      <div class="fact"><dt>Fachrichtung</dt><dd>Applikationsentwicklung</dd></div>
-      <div class="fact"><dt>Abschluss</dt><dd>EFZ und Berufsmaturität</dd></div>
-    </dl>
-  </section>
-
-  <section class="rise" style="animation-delay:110ms">
-    <h2>Was es nicht ist</h2>
-    <ul class="plain">
-      <li><span class="mark">01</span><span><b>Keine vierjährige Lehre.</b> Der schulische Teil meiner Ausbildung endet im Sommer 2027. Das Praxisjahr ist der betriebliche Schlussteil.</span></li>
-      <li><span class="mark">02</span><span><b>Das vierte Jahr findet voll und ganz im Betrieb statt.</b> Ab dem ersten Tag fünf Tage pro Woche, keine Schultage.</span></li>
-      <li><span class="mark">03</span><span><b>Am Schluss die IPA</b> im Betrieb. Die Noten aus den Informatikmodulen, den allgemeinbildenden Fächern und der IPA fliessen ins Abschlusszeugnis. Mit dem eidgenössischen Fähigkeitszeugnis kommt das Berufsmaturitätszeugnis.</span></li>
-      <li><span class="mark">04</span><span><b>Es gibt einen Standardvertrag</b> der Schule. Die Erläuterungen der Schulleitung schicke ich mit den Unterlagen.</span></li>
-    </ul>
-  </section>
-  <section class="rise" style="animation-delay:160ms">
-    <h2>Womit ich arbeite</h2>
-    <div class="skills">
-      <span class="skill">C# und .NET</span><span class="skill">MySQL</span><span class="skill">Datenbankmodellierung</span><span class="skill">SQL</span><span class="skill">Java</span><span class="skill">HTML und CSS</span><span class="skill">JavaScript und React</span><span class="skill">C</span><span class="skill">Linux, Ubuntu</span><span class="skill">Git</span><span class="skill">xUnit und Moq</span><span class="skill">Docker Compose</span><span class="skill">AWS Lambda, erste Schritte</span>
+  <div class="diag in" style="animation-delay:120ms" id="diag">
+    <div class="drow">
+      <span class="rlbl">Klassische Lehre Informatiker EFZ</span>
+      <div class="bar"><span>4 Jahre im Betrieb, mit Schultagen</span></div>
     </div>
-    <p class="note">Zeugnisnote Informatik 5.0. Sprachen: Deutsch, Englisch B2, Französisch DELF B1.</p>
-  </section>
-
-  <section class="rise" style="animation-delay:210ms">
-    <h2>Zwei Dinge, die nicht im Zeugnis stehen</h2>
-    <ul class="plain">
-      <li><span class="mark">→</span><span>Einen <b>ganztägigen Workshop zu Git und Markdown</b> für rund hundert Informatiklernende habe ich selbst konzipiert und durchgeführt.</span></li>
-      <li><span class="mark">→</span><span>An der <b>Regionalmeisterschaft Informatik 2026</b>, Skill 09 Software Applications Development, habe ich den dritten Rang unter den Teilnehmenden des GBS erreicht.</span></li>
-    </ul>
-  </section>
-
-  <section class="rise" style="animation-delay:260ms">
-    <h2>Projekte</h2>
-    <div class="cards">
-      <a class="card" href="https://thenix05.github.io/waffentrag-trainer/" rel="noopener">
-        <div class="top"><h3>Waffentrag-Trainer</h3><span class="live">live</span></div>
-        <p>Multiple-Choice-Trainer für die Prüfung Waffentragen, gebaut, weil ich sie selbst vorbereiten musste. 106 Fragen aus dem öffentlichen Katalog des fedpol, Fortschritt wird lokal im Browser gespeichert.</p>
-      </a>
-      <a class="card" href="https://github.com/thenix05/TextRecognitionOCR" rel="noopener">
-        <div class="top"><h3>TextRecognitionOCR</h3><span class="tag">C#</span></div>
-        <p>Konsolenanwendung, die mit Tesseract Text aus Bildern liest und die Zuverlässigkeit der Erkennung ausgibt.</p>
-      </a>
-      <a class="card" href="https://github.com/thenix05/m450" rel="noopener">
-        <div class="top"><h3>Unit Testing mit xUnit und Moq</h3><span class="tag">C#</span></div>
-        <p>AAA-Pattern, Test Doubles, Stubs und Spies. Eigene Testprojekte zu einer vorgegebenen Anwendung.</p>
-      </a>
-      <a class="card" href="https://github.com/thenix05/min-api-with-mongo" rel="noopener">
-        <div class="top"><h3>Minimal API mit MongoDB</h3><span class="tag">C# · Docker</span></div>
-        <p>Kleine Web-API, Start über Docker Compose zusammen mit der Datenbank.</p>
-      </a>
+    <div class="drow" style="margin-bottom:0">
+      <span class="rlbl">Informatikmittelschule IMS-T</span>
+      <div class="track" id="track">
+        <div class="seg" data-cap="Erstes Schuljahr: Grundlagen Programmierung, Mathematik, Sprachen, Berufsmaturitätsfächer.">Schule</div>
+        <div class="seg" data-cap="Zweites Schuljahr: Datenbanken, Netzwerke, Projektarbeit, dazu ein kurzes Praktikum von drei bis vier Wochen.">Schule</div>
+        <div class="seg" data-cap="Drittes Schuljahr: Applikationsentwicklung, Projektarbeit, Abschluss des schulischen Teils im Sommer 2027.">Schule</div>
+        <div class="seg prak" data-cap="Praktikumsjahr: zwölf Monate Vollzeit im Betrieb, keine Schultage, am Schluss die IPA."><span class="fill"></span><span class="txt">Betrieb, 12 Monate<small>August 2027 bis Juli 2028</small></span></div>
+        <div class="now" id="now"><b></b><i>heute</i></div>
+      </div>
+      <div class="axis"></div>
+      <div class="marks"><span>Aug 2024</span><span>2025</span><span>2026</span><span>Aug 2027</span><span>Juli 2028</span></div>
+      <p class="goal">Abschluss: EFZ Applikationsentwicklung und Berufsmaturität</p>
+      <p class="cap" id="cap"></p>
     </div>
-  </section>
-  <section class="rise" style="animation-delay:310ms">
-    <h2>Was ich noch nicht kann</h2>
-    <p class="note" style="margin-top:0;max-width:58ch">Python und PHP habe ich nie gebraucht. Ihre Technologien kenne ich mit grosser Wahrscheinlichkeit auch noch nicht. Dafür gibt es die Vorbereitungszeit: Im letzten Schulsemester arbeite ich mich in Absprache mit Ihnen in die benötigten Technologien ein, schulisch begleitet. Ein Jahr ist kurz, das weiss ich. Deshalb fange ich nicht erst im August an.</p>
-  </section>
+  </div>
 
-  <section class="rise" style="animation-delay:360ms">
-    <h2>Kontakt</h2>
-    <div class="contact">
-      <a class="row" href="mailto:tenzin.tuenschitsang@hotmail.com"><span class="k">E-Mail</span><span class="v">tenzin.tuenschitsang@hotmail.com</span></a>
-      <a class="row" href="https://github.com/thenix05" rel="noopener"><span class="k">GitHub</span><span class="v">github.com/thenix05</span></a>
+  <div class="acts in" style="animation-delay:160ms">
+    <a class="btn pri" href="mailto:tenzin.tuenschitsang@hotmail.com?subject=Praktikumsjahr%20August%202027%2C%20Applikationsentwicklung&amp;body=Guten%20Tag%0A%0AIch%20schreibe%20Ihnen%20wegen%20Ihres%20Praktikumsjahrs%20ab%20August%202027.%0A%0AFreundliche%20Gr%C3%BCsse%0A">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+      Mail schreiben</a>
+    <a class="btn" href="https://github.com/thenix05" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg>
+      GitHub</a>
+  </div>
+</header>
+
+<div class="rule"></div>
+
+<section class="col">
+  <p class="mlbl">Was das konkret heisst</p>
+  <dl class="facts">
+    <div><dt>Dauer</dt><dd>12 Monate</dd></div>
+    <div><dt>Start</dt><dd>August 2027</dd></div>
+    <div><dt>Ende</dt><dd>Juli 2028, mit IPA</dd></div>
+    <div><dt>Pensum</dt><dd>100% im Betrieb</dd></div>
+  </dl>
+</section>
+
+<div class="rule"></div>
+
+<section class="col">
+  <p class="mlbl">Womit ich heute arbeite</p>
+  <dl class="grp"><dt>Täglich im Unterricht und in Projekten</dt><dd>C# und .NET, MySQL und SQL, Java, Git, HTML und CSS, Linux</dd></dl>
+  <dl class="grp"><dt>Regelmässig eingesetzt</dt><dd>Unit Testing mit xUnit und Moq, Docker Compose, JavaScript, C</dd></dl>
+  <dl class="grp"><dt>Angefangen, noch nicht sicher</dt><dd>React, AWS Lambda</dd></dl>
+  <p class="after">Zeugnisnote Informatik 5.0. Englisch B2, Französisch B1. Ihre Technologien kenne ich mit grosser Wahrscheinlichkeit noch nicht. Dafür gibt es die Vorbereitungszeit: Im letzten Schulsemester arbeite ich mich in Absprache mit Ihnen ein, schulisch begleitet.</p>
+</section>
+
+<div class="rule"></div>
+
+<section class="col">
+  <p class="mlbl">Was man anschauen kann</p>
+  <div class="plist" id="plist">
+
+    <div class="pitem">
+      <button class="phead" aria-expanded="false">
+        <span><span class="pname">Waffentrag-Trainer</span><span class="pstack">HTML, JavaScript, eine Datei, 106 Fragen</span></span>
+        <span class="pright islive">live<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+      </button>
+      <div class="pbody"><div><div class="pwrap">
+        <p><b>Aufgabe.</b> Ich musste die Prüfung Waffentragen vorbereiten und wollte die Fragen üben statt sie nur zu lesen.</p>
+        <p><b>Entscheidung.</b> Eine einzelne HTML-Datei ohne Framework. Antworten über die Zifferntasten, Fortschritt lokal im Browser gespeichert, damit man zwischendurch weitermachen kann.</p>
+        <p><b>Grenze.</b> Die richtigen Antworten stammen aus dem öffentlichen Katalog des fedpol, die falschen Vorschläge habe ich selbst ergänzt.</p>
+        <p><a href="https://thenix05.github.io/waffentrag-trainer/" rel="noopener">Ausprobieren</a></p>
+      </div></div></div>
     </div>
-    <p class="note">Motivationsschreiben, Lebenslauf und Zeugnisse sende ich Ihnen gerne zu. Eine kurze Zeile genügt, dann melde ich mich auch telefonisch.</p>
-  </section>
 
-  <footer>
-    <span>St.&nbsp;Gallen</span>
-    <span>Stand 26. November 2026</span>
-  </footer>
+    <div class="pitem">
+      <button class="phead" aria-expanded="false">
+        <span><span class="pname">Minimal API mit MongoDB</span><span class="pstack">C#, .NET, MongoDB, Docker Compose</span></span>
+        <span class="pright">Code<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+      </button>
+      <div class="pbody"><div><div class="pwrap">
+        <p><b>Aufgabe.</b> Eine kleine Web-API mit Datenbank, die sich auf jedem Rechner gleich starten lässt.</p>
+        <p><b>Entscheidung.</b> Minimal API statt Controller, Datenbank und Anwendung zusammen in einer docker-compose-Datei, damit ein einziger Befehl genügt.</p>
+        <p><b>Grenze.</b> Keine Authentifizierung, keine Tests. Das Projekt zeigt den Aufbau, nicht den Betrieb.</p>
+        <p><a href="https://github.com/thenix05/min-api-with-mongo" rel="noopener">Code ansehen</a></p>
+      </div></div></div>
+    </div>
 
+    <div class="pitem">
+      <button class="phead" aria-expanded="false">
+        <span><span class="pname">Texterkennung mit Tesseract</span><span class="pstack">C#, Konsolenanwendung, OCR</span></span>
+        <span class="pright">Code<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+      </button>
+      <div class="pbody"><div><div class="pwrap">
+        <p><b>Aufgabe.</b> Verstehen, wie zuverlässig Texterkennung bei unterschiedlichen Vorlagen wirklich ist.</p>
+        <p><b>Entscheidung.</b> Tesseract über das NuGet-Paket, Ausgabe von Text und mittlerer Zuverlässigkeit. Bildpfad und Sprache kommen als Argumente, damit es nicht nur auf meinem Rechner läuft.</p>
+        <p><b>Grenze.</b> Bei Kontrollschildern ist die Erkennung deutlich schlechter als bei einem Flyer. Eine Vorverarbeitung der Bilder fehlt noch.</p>
+        <p><a href="https://github.com/thenix05/TextRecognitionOCR" rel="noopener">Code ansehen</a></p>
+      </div></div></div>
+    </div>
+
+    <div class="pitem">
+      <button class="phead" aria-expanded="false">
+        <span><span class="pname">Unit Testing mit xUnit und Moq</span><span class="pstack">C#, xUnit, Moq, Test Doubles</span></span>
+        <span class="pright">Code<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></span>
+      </button>
+      <div class="pbody"><div><div class="pwrap">
+        <p><b>Aufgabe.</b> Zu einer vorgegebenen Anwendung eigene Tests schreiben, inklusive Stubs und Spies.</p>
+        <p><b>Entscheidung.</b> Aufbau nach dem AAA-Muster, jede Testklasse prüft eine Verantwortlichkeit, Test Doubles nur dort, wo eine echte Abhängigkeit den Test langsam oder unzuverlässig macht.</p>
+        <p><b>Grenze.</b> Ein Übungsprojekt aus dem Modul 450, keine eigene Anwendung.</p>
+        <p><a href="https://github.com/thenix05/m450" rel="noopener">Code ansehen</a></p>
+      </div></div></div>
+    </div>
+
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section class="col">
+  <p class="mlbl">Ausserhalb des Codes</p>
+  <div class="two">
+    <p><b>Git-Workshop für rund hundert Lernende.</b><span>Ganztägig, selbst konzipiert und selbst gehalten. Git und Markdown von der ersten Zeile an.</span></p>
+    <p><b>Dritter Rang, Regionalmeisterschaft Informatik 2026.</b><span>Skill 09 Software Applications Development, unter den Teilnehmenden des GBS.</span></p>
+  </div>
+</section>
+
+<div class="rule"></div>
+
+<section class="col">
+  <p class="why">Mehrere Betriebe haben meine Bewerbung für eine vierjährige Lehre gehalten und deshalb abgesagt. Diese Seite ist die Antwort auf diese Frage, damit Sie sie nicht stellen müssen.</p>
+</section>
+
+<div class="rule"></div>
+
+<section class="col" id="kontakt">
+  <p class="mlbl">Kontakt</p>
+  <p style="margin:0 0 20px;font-size:17px">Ich komme für ein Gespräch gerne bei Ihnen vorbei.</p>
+  <div class="contact">
+    <a class="crow pri" href="mailto:tenzin.tuenschitsang@hotmail.com?subject=Praktikumsjahr%20August%202027%2C%20Applikationsentwicklung"><span class="ck">E-Mail</span><span class="cv">tenzin.tuenschitsang@hotmail.com</span></a>
+    <a class="crow" href="https://github.com/thenix05" rel="noopener"><span class="ck">GitHub</span><span class="cv">github.com/thenix05</span></a>
+  </div>
+  <p class="hint">Motivationsschreiben, Lebenslauf und Zeugnisse sende ich Ihnen gerne zu, dazu die Erläuterungen unserer Schulleitung zum Praktikumsjahr. Eine kurze Zeile genügt, telefonisch melde ich mich ebenfalls.</p>
+</section>
+
+<footer>
+  <p class="foot" id="foot">Eine Datei, handgeschriebenes HTML, keine Abhängigkeiten, kein Build.</p>
+</footer>
 </div>
+
+<script>
+(function(){
+  var START=new Date(2024,7,1), END=new Date(2028,6,31), now=new Date();
+  var track=document.getElementById('track'), marker=document.getElementById('now');
+  function place(){
+    var f=(now-START)/(END-START);
+    if(f<0||f>1){marker.style.display='none';return;}
+    var segs=track.querySelectorAll('.seg'), i=Math.min(3,Math.floor(f*4)), local=f*4-i;
+    var tr=track.getBoundingClientRect(), sr=segs[i].getBoundingClientRect();
+    if(window.innerWidth>760){
+      var x=(sr.left-tr.left)+local*sr.width;
+      marker.style.left=x+'px'; marker.style.top='0'; marker.style.height=tr.height+8+'px';
+      marker.classList.toggle('flip', x>tr.width-150);
+    }else{
+      var y=(sr.top-tr.top)+local*sr.height;
+      marker.style.top=y+'px'; marker.style.left='0'; marker.style.height='2px';
+    }
+  }
+  place(); window.addEventListener('resize',place);
+
+  var cap=document.getElementById('cap');
+  track.querySelectorAll('.seg').forEach(function(s){
+    s.addEventListener('mouseenter',function(){cap.textContent=s.dataset.cap});
+    s.addEventListener('mouseleave',function(){cap.textContent=''});
+  });
+
+  document.querySelectorAll('.phead').forEach(function(b){
+    b.addEventListener('click',function(){
+      var it=b.parentNode, open=it.classList.toggle('open');
+      b.setAttribute('aria-expanded',open?'true':'false');
+    });
+  });
+
+  var bar=document.getElementById('bar'), diag=document.getElementById('diag');
+  if('IntersectionObserver' in window){
+    new IntersectionObserver(function(e){
+      bar.classList.toggle('on', !e[0].isIntersecting && e[0].boundingClientRect.top<0);
+    },{threshold:0}).observe(diag);
+  }
+
+  var startP=new Date(2027,7,1);
+  if(now<startP){
+    var m=Math.round((startP-now)/(1000*60*60*24*30.44));
+    document.getElementById('foot').textContent='Bis zum Praktikumsbeginn: '+m+' Monate. Eine Datei, handgeschriebenes HTML, keine Abhängigkeiten, kein Build.';
+  }
+})();
+</script>
 </body>
 </html>
