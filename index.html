@@ -320,28 +320,29 @@ Zuverlaessigkeit: 87.4 %</pre></div>
 
     <div class="pit">
       <div class="ptop">
-        <div><h3>Minimal API mit MongoDB</h3><p class="pstack">C#, .NET, MongoDB, Docker Compose</p></div>
-        <a class="plive" href="https://github.com/thenix05/min-api-with-mongo" rel="noopener">Code ansehen</a>
+                <div><h3>CSV zu JSON auf AWS</h3><p class="pstack">C#, AWS Lambda, S3, Bash, Modul 346</p></div>
+        <a class="plive" href="https://github.com/thenix05/M346-Projekt-CsvToJson-2024" rel="noopener">Code ansehen</a>
       </div>
       <div class="pgrid">
         <div class="pfacts">
-          <p><b>Aufgabe.</b> Eine kleine Web-API mit Datenbank, die auf jedem Rechner mit einem einzigen Befehl startet.</p>
-          <p><b>Entscheidung.</b> Minimal API statt Controller, weil die Anwendung dafür zu klein ist. Datenbank und Anwendung liegen zusammen in einer docker-compose-Datei, damit niemand erst eine Datenbank installieren muss.</p>
-          <p><b>Grenze.</b> Keine Authentifizierung und keine Tests. Das Projekt zeigt den Aufbau, nicht den Betrieb.</p>
-          <p><b>Nächster Schritt.</b> xUnit-Tests für die Endpunkte und die Zugangsdaten aus der compose-Datei in Umgebungsvariablen auslagern.</p>
+          <p><b>Aufgabe.</b> Wer eine CSV-Datei hochlädt, soll kurz darauf eine JSON-Datei bekommen, ohne dass jemand etwas von Hand startet.</p>
+          <p><b>Entscheidung.</b> Zwei S3-Buckets: Der Upload in den ersten löst über einen Trigger eine Lambda-Funktion in C# aus, das Ergebnis landet im zweiten. Die ganze Einrichtung steckt in einem Shell-Skript, damit die Umgebung reproduzierbar ist und nicht von Hand zusammengeklickt wird.</p>
+          <p><b>Grenze.</b> Eine Gruppenarbeit aus dem Modul 346, nicht allein gebaut. Bucket-Namen und Region stehen fest im Skript, und eine fehlerhafte CSV-Datei fängt das Programm noch nicht ab.</p>
+          <p><b>Nächster Schritt.</b> Bucket-Namen und Region als Argumente übergeben und einen Testfall mit einer absichtlich kaputten CSV-Datei ergänzen.</p>
         </div>
         <div>
-          <div class="code"><pre><b>services:</b>
-  mongodb:
-    image: mongo
-    ports: [<b>"27017:27017"</b>]
-    volumes: [mongodb_data:/data/db]
+          <div class="code"><pre>LAMBDA_NAME=<b>"CsvToJsonLambda"</b>
+REGION=<b>"us-east-1"</b>
 
-  webapi:
-    build: { context: ./WebApi }
-    ports: [<b>"5001:5001"</b>]
-    depends_on: [mongodb]</pre></div>
-          <p class="cap">Ausschnitt aus docker-compose.yml, gekürzt</p>
+addTrigger(){
+  aws lambda add-permission \
+    --function-name $LAMBDA_NAME \
+    --action <b>"lambda:InvokeFunction"</b> \
+    --principal s3.amazonaws.com \
+    --source-arn arn:aws:s3:::$CSV_BUCKET
+  <i># danach die Benachrichtigung am Bucket setzen</i>
+}</pre></div>
+          <p class="cap">Ausschnitt aus CsvToJson.sh, gekürzt</p>
         </div>
       </div>
     </div>
